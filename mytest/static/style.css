@@ -1,0 +1,70 @@
+.centered
+{
+    text-align: center;
+}
+
+.large
+{
+    font-size: large;
+    color: chartreuse;
+    font-style: italic;
+}
+
+.medium
+{
+    font-size: medium;
+}
+
+.small
+{
+    font-size: small;
+}
+
+h1{
+    font-size :xx-large;
+    font-style: italic;
+    font-weight: bold;
+    color: chartreuse;
+}
+
+li {
+    font-size : small;
+    margin: 10px 0;
+    font-style:italic;
+    font-weight:bold;
+    color: chartreuse;
+  }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074d9; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+  /* Button hover effect */
+.button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+  
+/* Button click effect */
+.button:active {
+    background-color: #003d73; /* Even darker background color when clicked */
+}
+  
+.form_group
+{
+    font-style:italic;
+    font-weight:bold;
+}
+
+.input_grp_list
+{
+    font-style:italic;
+    font-weight:bold;
+}

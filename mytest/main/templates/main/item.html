@@ -1,0 +1,22 @@
+{% extends "main/layout.html" %}
+
+{% block title %}{{ls.name}}{% endblock %}
+
+
+<div id="content" name="content">
+{% block content %}
+<p>
+    <h1>{{ls.name}}</h1>
+    {% for item in ls.item_set.all %}
+    <ul>
+        {% if item.complete == True %}
+            <li>{{item.text}} complete</li>
+        {% else %}
+            <li>{{item.text}} not complete</li>
+        {%endif%}
+    </ul>
+    {% endfor %}
+</p>
+
+{% endblock %}
+</div>

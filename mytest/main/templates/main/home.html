@@ -1,0 +1,26 @@
+{% extends "main/layout.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+<p>
+    {% for ls in list %}
+        <h1">{{ls.name}}</h1>
+        <form method="post"action="#" class = "form_group">
+        {% csrf_token %}
+        <ul>
+        {% for item in ls.item_set.all %}
+            {% if item.complete == True %}
+                <li><input type= "checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}</li>
+            {% else %}
+                <li><input type= "checkbox", name="c{{item.id}}" >{{item.text}}</li>
+            {%endif%}
+        {% endfor %}
+        </ul>
+        <button type="submit", name="newItem",class="button" value ="{{ls.name}}">Add Item</button>
+        <input autocomplete="off" autofocus name="new{{ls.name}}", placeholder="todo" type="text">
+        <button type="submit", name="{{ls.name}}",value="{{ls.name}}">Save</button>
+    </form>
+    {% endfor %}
+</p>
+{% endblock %}
